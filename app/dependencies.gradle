@@ -1,0 +1,47 @@
+ext {
+
+    appDependencies = [
+            [configuration: "$IMPLEMENTATION", dependency: fileTree(dir: 'libs', include: ['*.jar'])],
+            [configuration: "$IMPLEMENTATION", dependency: project(':domain')],
+            [configuration: "$IMPLEMENTATION", dependency: project(':data')],
+
+            [configuration: "$IMPLEMENTATION", dependency: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"],
+
+            // androidX
+            [configuration: "$IMPLEMENTATION", dependency: "androidx.appcompat:appcompat:$androidXAppCompatVersion"],
+            [configuration: "$IMPLEMENTATION", dependency: "androidx.core:core-ktx:$androidXCoreVersion"],
+            [configuration: "$IMPLEMENTATION", dependency: "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"],
+            [configuration: "$IMPLEMENTATION", dependency: "com.google.android.material:material:$androidXMaterialVersion"],
+            [configuration: "$IMPLEMENTATION", dependency: "android.arch.navigation:navigation-fragment-ktx:$navigationVersion"],
+            [configuration: "$IMPLEMENTATION", dependency: "android.arch.navigation:navigation-ui-ktx:$navigationVersion"],
+
+            // aac
+            [configuration: "$IMPLEMENTATION", dependency: "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"],
+            [configuration: "$KAPT", dependency: "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"],
+
+            // play services
+            [configuration: "$IMPLEMENTATION", dependency: "com.google.android.gms:play-services-auth:$playServicesAuthVersion"],
+
+            // debug tools
+            [configuration: "$IMPLEMENTATION", dependency: "com.jakewharton.timber:timber:$timberVersion"],
+
+            // rxjava
+            [configuration: "$IMPLEMENTATION", dependency: "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"],
+            [configuration: "$IMPLEMENTATION", dependency: "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"],
+            [configuration: "$IMPLEMENTATION", dependency: "io.reactivex.rxjava2:rxjava:$rxJavaVersion"],
+
+            // dagger
+            [configuration: "$IMPLEMENTATION", dependency: "com.google.dagger:dagger:$daggerVersion"],
+            [configuration: "$IMPLEMENTATION", dependency: "com.google.dagger:dagger-android:$daggerVersion"],
+            [configuration: "$IMPLEMENTATION", dependency: "com.google.dagger:dagger-android-support:$daggerVersion"],
+            [configuration: "$KAPT", dependency: "com.google.dagger:dagger-compiler:$daggerVersion"],
+            [configuration: "$KAPT", dependency: "com.google.dagger:dagger-android-processor:$daggerVersion"],
+
+
+            [configuration: "$TEST_IMPLEMENTATION", dependency: "junit:junit:$jUnitVersion"],
+
+            [configuration: "$ANDROID_TEST_IMPLEMENTATION", dependency: "androidx.test:runner:$androidXTestRunnerVersion"],
+            [configuration: "$ANDROID_TEST_IMPLEMENTATION", dependency: "androidx.test.espresso:espresso-core:$espressoVersion"],
+    ]
+
+}
