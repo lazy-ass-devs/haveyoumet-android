@@ -10,4 +10,7 @@
     <string name="hint_repassword">Re-enter Password</string>
     <string name="btn_register">Register</string>
     <string name="title_screen_register">Register</string>
+    <string name="btn_sign_in_google">Sign In with Google</string>
+    <string name="title_screen_album_list">Albums</string>
+    <string name="title_screen_album_detail">Album Details</string>
 </resources>

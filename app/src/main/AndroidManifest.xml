@@ -13,14 +13,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.splash.SplashActivity">
+        <activity android:name="com.lazyassevs.haveyoumet.ui.view.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.authentication.AuthenticationActivity" />
+        <activity android:name="com.lazyassevs.haveyoumet.ui.view.authentication.AuthenticationActivity" />
+        <activity android:name=".ui.view.album.AlbumActivity" />
     </application>
 
 </manifest>

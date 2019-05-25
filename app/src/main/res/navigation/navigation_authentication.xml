@@ -7,18 +7,10 @@
 
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.lazyassevs.haveyoumet.ui.authentication.signin.SignInFragment"
+        android:name="com.lazyassevs.haveyoumet.ui.view.authentication.signin.SignInFragment"
         android:label="@string/title_screen_sign_in"
         tools:layout="@layout/fragment_sign_in">
-        <action
-            android:id="@+id/showSignUp"
-            app:destination="@id/registerFragment" />
-    </fragment>
 
-    <fragment
-        android:id="@+id/registerFragment"
-        android:name="com.lazyassevs.haveyoumet.ui.authentication.register.RegisterFragment"
-        android:label="@string/title_screen_register"
-        tools:layout="@layout/fragment_register"/>
+    </fragment>
 
 </navigation>
