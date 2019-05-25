@@ -1,0 +1,19 @@
+ext {
+
+    domainDependencies = [
+            [configuration: "$IMPLEMENTATION", dependency: fileTree(dir: 'libs', include: ['*.jar'])],
+
+            [configuration: "$IMPLEMENTATION", dependency: "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"],
+
+            // rxjava
+            [configuration: "$IMPLEMENTATION", dependency: "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"],
+            [configuration: "$IMPLEMENTATION", dependency: "io.reactivex.rxjava2:rxjava:$rxJavaVersion"],
+
+            // dagger
+            [configuration: "$IMPLEMENTATION", dependency: "com.google.dagger:dagger:$daggerVersion"],
+            [configuration: "$KAPT", dependency: "com.google.dagger:dagger-compiler:$daggerVersion"],
+
+            [configuration: "$IMPLEMENTATION", dependency: "com.squareup.retrofit2:retrofit:$retrofitVersion"],
+    ]
+
+}

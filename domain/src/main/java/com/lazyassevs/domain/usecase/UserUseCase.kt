@@ -8,4 +8,6 @@ interface UserUseCase {
 
     fun signIn(emailAddress: String, password: String): Single<Boolean>
 
+    fun signInUsingProvider(provider: String, id: String): Single<Boolean>
+
 }

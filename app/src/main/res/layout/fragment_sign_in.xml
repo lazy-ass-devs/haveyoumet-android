@@ -7,11 +7,11 @@
 
         <variable
             name="state"
-            type="com.lazyassevs.haveyoumet.ui.authentication.signin.State" />
+            type="com.lazyassevs.haveyoumet.ui.view.authentication.signin.State" />
 
         <variable
             name="form"
-            type="com.lazyassevs.haveyoumet.ui.authentication.signin.SignInFormViewModel" />
+            type="com.lazyassevs.haveyoumet.ui.view.authentication.signin.SignInFormViewModel" />
 
     </data>
 
@@ -44,6 +44,25 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="8dp"
                 android:src="@mipmap/ic_launcher_round" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sign_in_google"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:text="@string/btn_sign_in_google"
+                app:icon="@drawable/common_google_signin_btn_icon_dark" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="or signin using"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                app:textAllCaps="true" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
