@@ -31,6 +31,7 @@ ext {
     timberVersion = '4.7.1'
 
     retrofitVersion = '2.5.0'
+    okhttpVersion = '3.14.2'
 
     jUnitVersion = '4.12'
     androidXTestRunnerVersion = '1.1.1'

@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
 apply from: 'dependencies.gradle'
 
 android {
@@ -27,7 +28,16 @@ android {
 }
 
 dependencies {
-    remoteDependencies.each {
+    localDependencies.each {
         add(it.configuration, it.dependency, it.options)
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.realm:realm-gradle-plugin:5.11.0"
     }
 }

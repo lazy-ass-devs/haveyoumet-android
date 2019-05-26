@@ -1,6 +1,6 @@
 ext {
 
-    remoteDependencies = [
+    localDependencies = [
             [configuration: "$IMPLEMENTATION", dependency: fileTree(dir: 'libs', include: ['*.jar'])],
             [configuration: "$IMPLEMENTATION", dependency: project(':domain')],
 
@@ -16,11 +16,6 @@ ext {
             // dagger
             [configuration: "$IMPLEMENTATION", dependency: "com.google.dagger:dagger:$daggerVersion"],
             [configuration: "$KAPT", dependency: "com.google.dagger:dagger-compiler:$daggerVersion"],
-
-            [configuration: "$IMPLEMENTATION", dependency: "com.squareup.retrofit2:retrofit:$retrofitVersion"],
-            [configuration: "$IMPLEMENTATION", dependency: "com.squareup.retrofit2:converter-gson:$retrofitVersion"],
-            [configuration: "$IMPLEMENTATION", dependency: "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"],
-            [configuration: "$IMPLEMENTATION", dependency: "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"],
     ]
 
 }
